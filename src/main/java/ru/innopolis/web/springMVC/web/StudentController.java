@@ -5,16 +5,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import ru.innopolis.k_sharypov.web.spring_mvc_practice.common.dto.ListDTO;
-import ru.innopolis.k_sharypov.web.spring_mvc_practice.common.dto.StudentDTO;
-import ru.innopolis.k_sharypov.web.spring_mvc_practice.common.services.StudentServiceInterface;
-import ru.innopolis.k_sharypov.web.spring_mvc_practice.server.dao.StudentDAO;
-
-import javax.servlet.http.HttpServletRequest;
+import ru.innopolis.web.springMVC.common.services.StudentServiceInterface;
 
 
 @Controller
@@ -68,7 +61,7 @@ public class StudentController {
         StudentDTO s = new StudentDTO();
         /**
          *  For propertly process non asci symbols in URI, add  URIEncoding="UTF-8" to <connector> in TOMCAT_DIR/conf/server.xml
-         */
+
         s.setFirstName(req.getParameter("firstName"));
         s.setLastName(req.getParameter("lastName"));
         s.setSex(req.getParameter("sex"));
@@ -96,6 +89,6 @@ public class StudentController {
             l.setOffset(0l);
         }
         return l;
-    }
+    }*/
 
 }
